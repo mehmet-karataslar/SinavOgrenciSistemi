@@ -1312,6 +1312,6 @@ Bu proje, Entity Framework 6 kullanarak 45 farklı senaryoyu kapsayan kapsamlı 
 
 ---
 
-*Rapor Tarihi: 2024*  
+*Rapor Tarihi: 21.12.2025*  
 *Proje: SinavOgrenciSistemi*  
 *Framework: .NET Framework 4.8 + Entity Framework 6.4.4*

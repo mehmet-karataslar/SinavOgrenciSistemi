@@ -439,6 +439,8 @@ Bu proje eğitim amaçlı geliştirilmiştir. Akademik kullanım için uygundur.
 
 **⭐ Projeyi beğendiyseniz yıldız vermeyi unutmayın! ⭐**
 
+*Rapor Tarihi: 21.12.2025*  
+
 Made with ❤️ using Entity Framework and Windows Forms
 
 </div>
