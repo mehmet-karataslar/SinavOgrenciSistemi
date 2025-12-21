@@ -98,8 +98,8 @@ namespace SinavOgrenciSistemi
             this.btnNotListele.Text = "Soru 6: Not Listele";
             this.btnNotListele.UseVisualStyleBackColor = false;
             this.btnNotListele.Click += new System.EventHandler(this.btnNotListele_Click);
-            this.btnNotListele.MouseEnter += (s, e) => { btnNotListele.BackColor = Color.FromArgb(41, 128, 185); };
-            this.btnNotListele.MouseLeave += (s, e) => { btnNotListele.BackColor = Color.FromArgb(52, 152, 219); };
+            this.btnNotListele.MouseEnter += new System.EventHandler(this.btnNotListele_MouseEnter);
+            this.btnNotListele.MouseLeave += new System.EventHandler(this.btnNotListele_MouseLeave);
             
             // btnNotListeleDersAdi
             this.btnNotListeleDersAdi.BackColor = Color.FromArgb(46, 204, 113);
@@ -114,8 +114,8 @@ namespace SinavOgrenciSistemi
             this.btnNotListeleDersAdi.Text = "Soru 7: Ders Adı ile";
             this.btnNotListeleDersAdi.UseVisualStyleBackColor = false;
             this.btnNotListeleDersAdi.Click += new System.EventHandler(this.btnNotListeleDersAdi_Click);
-            this.btnNotListeleDersAdi.MouseEnter += (s, e) => { btnNotListeleDersAdi.BackColor = Color.FromArgb(39, 174, 96); };
-            this.btnNotListeleDersAdi.MouseLeave += (s, e) => { btnNotListeleDersAdi.BackColor = Color.FromArgb(46, 204, 113); };
+            this.btnNotListeleDersAdi.MouseEnter += new System.EventHandler(this.btnNotListeleDersAdi_MouseEnter);
+            this.btnNotListeleDersAdi.MouseLeave += new System.EventHandler(this.btnNotListeleDersAdi_MouseLeave);
             
             // btnAdSoyadBirlestir
             this.btnAdSoyadBirlestir.BackColor = Color.FromArgb(155, 89, 182);
@@ -130,8 +130,8 @@ namespace SinavOgrenciSistemi
             this.btnAdSoyadBirlestir.Text = "Soru 9: Ad+Soyad";
             this.btnAdSoyadBirlestir.UseVisualStyleBackColor = false;
             this.btnAdSoyadBirlestir.Click += new System.EventHandler(this.btnAdSoyadBirlestir_Click);
-            this.btnAdSoyadBirlestir.MouseEnter += (s, e) => { btnAdSoyadBirlestir.BackColor = Color.FromArgb(142, 68, 173); };
-            this.btnAdSoyadBirlestir.MouseLeave += (s, e) => { btnAdSoyadBirlestir.BackColor = Color.FromArgb(155, 89, 182); };
+            this.btnAdSoyadBirlestir.MouseEnter += new System.EventHandler(this.btnAdSoyadBirlestir_MouseEnter);
+            this.btnAdSoyadBirlestir.MouseLeave += new System.EventHandler(this.btnAdSoyadBirlestir_MouseLeave);
             
             // btnOgrenciKulup
             this.btnOgrenciKulup.BackColor = Color.FromArgb(241, 196, 15);
@@ -146,8 +146,8 @@ namespace SinavOgrenciSistemi
             this.btnOgrenciKulup.Text = "Soru 10: Öğrenci-Kulüp";
             this.btnOgrenciKulup.UseVisualStyleBackColor = false;
             this.btnOgrenciKulup.Click += new System.EventHandler(this.btnOgrenciKulup_Click);
-            this.btnOgrenciKulup.MouseEnter += (s, e) => { btnOgrenciKulup.BackColor = Color.FromArgb(243, 156, 18); };
-            this.btnOgrenciKulup.MouseLeave += (s, e) => { btnOgrenciKulup.BackColor = Color.FromArgb(241, 196, 15); };
+            this.btnOgrenciKulup.MouseEnter += new System.EventHandler(this.btnOgrenciKulup_MouseEnter);
+            this.btnOgrenciKulup.MouseLeave += new System.EventHandler(this.btnOgrenciKulup_MouseLeave);
             
             // btnUcTabloJoin
             this.btnUcTabloJoin.BackColor = Color.FromArgb(230, 126, 34);
@@ -162,8 +162,8 @@ namespace SinavOgrenciSistemi
             this.btnUcTabloJoin.Text = "Soru 11: Üç Tablo";
             this.btnUcTabloJoin.UseVisualStyleBackColor = false;
             this.btnUcTabloJoin.Click += new System.EventHandler(this.btnUcTabloJoin_Click);
-            this.btnUcTabloJoin.MouseEnter += (s, e) => { btnUcTabloJoin.BackColor = Color.FromArgb(211, 84, 0); };
-            this.btnUcTabloJoin.MouseLeave += (s, e) => { btnUcTabloJoin.BackColor = Color.FromArgb(230, 126, 34); };
+            this.btnUcTabloJoin.MouseEnter += new System.EventHandler(this.btnUcTabloJoin_MouseEnter);
+            this.btnUcTabloJoin.MouseLeave += new System.EventHandler(this.btnUcTabloJoin_MouseLeave);
             
             // btnGeri
             this.btnGeri.BackColor = Color.FromArgb(149, 165, 166);
@@ -178,8 +178,8 @@ namespace SinavOgrenciSistemi
             this.btnGeri.Text = "← Geri";
             this.btnGeri.UseVisualStyleBackColor = false;
             this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
-            this.btnGeri.MouseEnter += (s, e) => { btnGeri.BackColor = Color.FromArgb(127, 140, 141); };
-            this.btnGeri.MouseLeave += (s, e) => { btnGeri.BackColor = Color.FromArgb(149, 165, 166); };
+            this.btnGeri.MouseEnter += new System.EventHandler(this.btnGeri_MouseEnter);
+            this.btnGeri.MouseLeave += new System.EventHandler(this.btnGeri_MouseLeave);
             
             // panelSearch
             this.panelSearch.BackColor = Color.White;
@@ -221,8 +221,8 @@ namespace SinavOgrenciSistemi
             this.btnOgrenciNotlari.Text = "Soru 12: Öğrenci Notları";
             this.btnOgrenciNotlari.UseVisualStyleBackColor = false;
             this.btnOgrenciNotlari.Click += new System.EventHandler(this.btnOgrenciNotlari_Click);
-            this.btnOgrenciNotlari.MouseEnter += (s, e) => { btnOgrenciNotlari.BackColor = Color.FromArgb(22, 160, 133); };
-            this.btnOgrenciNotlari.MouseLeave += (s, e) => { btnOgrenciNotlari.BackColor = Color.FromArgb(26, 188, 156); };
+            this.btnOgrenciNotlari.MouseEnter += new System.EventHandler(this.btnOgrenciNotlari_MouseEnter);
+            this.btnOgrenciNotlari.MouseLeave += new System.EventHandler(this.btnOgrenciNotlari_MouseLeave);
             
             // panelData
             this.panelData.BackColor = Color.White;

@@ -229,8 +229,8 @@ namespace SinavOgrenciSistemi
             this.btnEkle.Text = "➕ Ekle (Soru 13)";
             this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
-            this.btnEkle.MouseEnter += (s, e) => { btnEkle.BackColor = Color.FromArgb(39, 174, 96); };
-            this.btnEkle.MouseLeave += (s, e) => { btnEkle.BackColor = Color.FromArgb(46, 204, 113); };
+            this.btnEkle.MouseEnter += new System.EventHandler(this.btnEkle_MouseEnter);
+            this.btnEkle.MouseLeave += new System.EventHandler(this.btnEkle_MouseLeave);
             
             // btnSil
             this.btnSil.BackColor = Color.FromArgb(231, 76, 60);
@@ -245,8 +245,8 @@ namespace SinavOgrenciSistemi
             this.btnSil.Text = "🗑️ Sil (Soru 15)";
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
-            this.btnSil.MouseEnter += (s, e) => { btnSil.BackColor = Color.FromArgb(192, 57, 43); };
-            this.btnSil.MouseLeave += (s, e) => { btnSil.BackColor = Color.FromArgb(231, 76, 60); };
+            this.btnSil.MouseEnter += new System.EventHandler(this.btnSil_MouseEnter);
+            this.btnSil.MouseLeave += new System.EventHandler(this.btnSil_MouseLeave);
             
             // btnGuncelle
             this.btnGuncelle.BackColor = Color.FromArgb(52, 152, 219);
@@ -261,8 +261,8 @@ namespace SinavOgrenciSistemi
             this.btnGuncelle.Text = "✏️ Güncelle (Soru 16)";
             this.btnGuncelle.UseVisualStyleBackColor = false;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
-            this.btnGuncelle.MouseEnter += (s, e) => { btnGuncelle.BackColor = Color.FromArgb(41, 128, 185); };
-            this.btnGuncelle.MouseLeave += (s, e) => { btnGuncelle.BackColor = Color.FromArgb(52, 152, 219); };
+            this.btnGuncelle.MouseEnter += new System.EventHandler(this.btnGuncelle_MouseEnter);
+            this.btnGuncelle.MouseLeave += new System.EventHandler(this.btnGuncelle_MouseLeave);
             
             // btnEntityStateGoster
             this.btnEntityStateGoster.BackColor = Color.FromArgb(155, 89, 182);
@@ -277,8 +277,8 @@ namespace SinavOgrenciSistemi
             this.btnEntityStateGoster.Text = "ℹ️ EntityState (Soru 18)";
             this.btnEntityStateGoster.UseVisualStyleBackColor = false;
             this.btnEntityStateGoster.Click += new System.EventHandler(this.btnEntityStateGoster_Click);
-            this.btnEntityStateGoster.MouseEnter += (s, e) => { btnEntityStateGoster.BackColor = Color.FromArgb(142, 68, 173); };
-            this.btnEntityStateGoster.MouseLeave += (s, e) => { btnEntityStateGoster.BackColor = Color.FromArgb(155, 89, 182); };
+            this.btnEntityStateGoster.MouseEnter += new System.EventHandler(this.btnEntityStateGoster_MouseEnter);
+            this.btnEntityStateGoster.MouseLeave += new System.EventHandler(this.btnEntityStateGoster_MouseLeave);
             
             // btnGeri
             this.btnGeri.BackColor = Color.FromArgb(149, 165, 166);
@@ -293,8 +293,8 @@ namespace SinavOgrenciSistemi
             this.btnGeri.Text = "← Geri";
             this.btnGeri.UseVisualStyleBackColor = false;
             this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
-            this.btnGeri.MouseEnter += (s, e) => { btnGeri.BackColor = Color.FromArgb(127, 140, 141); };
-            this.btnGeri.MouseLeave += (s, e) => { btnGeri.BackColor = Color.FromArgb(149, 165, 166); };
+            this.btnGeri.MouseEnter += new System.EventHandler(this.btnGeri_MouseEnter);
+            this.btnGeri.MouseLeave += new System.EventHandler(this.btnGeri_MouseLeave);
             
             // panelData
             this.panelData.BackColor = Color.White;

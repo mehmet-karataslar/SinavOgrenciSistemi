@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using SinavOgrenciSistemi.Models;
@@ -75,6 +76,37 @@ namespace SinavOgrenciSistemi
         private void btnGeri_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        // MouseEnter ve MouseLeave event handler'ları
+        private void btnDurumListesi_MouseEnter(object sender, EventArgs e)
+        {
+            btnDurumListesi.BackColor = Color.FromArgb(41, 128, 185);
+        }
+
+        private void btnDurumListesi_MouseLeave(object sender, EventArgs e)
+        {
+            btnDurumListesi.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void btnGecenKalan_MouseEnter(object sender, EventArgs e)
+        {
+            btnGecenKalan.BackColor = Color.FromArgb(39, 174, 96);
+        }
+
+        private void btnGecenKalan_MouseLeave(object sender, EventArgs e)
+        {
+            btnGecenKalan.BackColor = Color.FromArgb(46, 204, 113);
+        }
+
+        private void btnGeri_MouseEnter(object sender, EventArgs e)
+        {
+            btnGeri.BackColor = Color.FromArgb(127, 140, 141);
+        }
+
+        private void btnGeri_MouseLeave(object sender, EventArgs e)
+        {
+            btnGeri.BackColor = Color.FromArgb(149, 165, 166);
         }
     }
 }

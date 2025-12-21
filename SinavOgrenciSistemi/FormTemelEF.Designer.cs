@@ -86,8 +86,8 @@ namespace SinavOgrenciSistemi
             this.btnOgrenciListele.Text = "Soru 2: Öğrenci Listele";
             this.btnOgrenciListele.UseVisualStyleBackColor = false;
             this.btnOgrenciListele.Click += new System.EventHandler(this.btnOgrenciListele_Click);
-            this.btnOgrenciListele.MouseEnter += (s, e) => { btnOgrenciListele.BackColor = Color.FromArgb(41, 128, 185); };
-            this.btnOgrenciListele.MouseLeave += (s, e) => { btnOgrenciListele.BackColor = Color.FromArgb(52, 152, 219); };
+            this.btnOgrenciListele.MouseEnter += new System.EventHandler(this.btnOgrenciListele_MouseEnter);
+            this.btnOgrenciListele.MouseLeave += new System.EventHandler(this.btnOgrenciListele_MouseLeave);
             
             // btnOgrenciListeleGizli
             this.btnOgrenciListeleGizli.BackColor = Color.FromArgb(46, 204, 113);
@@ -102,8 +102,8 @@ namespace SinavOgrenciSistemi
             this.btnOgrenciListeleGizli.Text = "Soru 3: Foto Gizli Listele";
             this.btnOgrenciListeleGizli.UseVisualStyleBackColor = false;
             this.btnOgrenciListeleGizli.Click += new System.EventHandler(this.btnOgrenciListeleGizli_Click);
-            this.btnOgrenciListeleGizli.MouseEnter += (s, e) => { btnOgrenciListeleGizli.BackColor = Color.FromArgb(39, 174, 96); };
-            this.btnOgrenciListeleGizli.MouseLeave += (s, e) => { btnOgrenciListeleGizli.BackColor = Color.FromArgb(46, 204, 113); };
+            this.btnOgrenciListeleGizli.MouseEnter += new System.EventHandler(this.btnOgrenciListeleGizli_MouseEnter);
+            this.btnOgrenciListeleGizli.MouseLeave += new System.EventHandler(this.btnOgrenciListeleGizli_MouseLeave);
             
             // btnDersListeleEF
             this.btnDersListeleEF.BackColor = Color.FromArgb(155, 89, 182);
@@ -118,8 +118,8 @@ namespace SinavOgrenciSistemi
             this.btnDersListeleEF.Text = "Soru 4: Ders Listele (EF)";
             this.btnDersListeleEF.UseVisualStyleBackColor = false;
             this.btnDersListeleEF.Click += new System.EventHandler(this.btnDersListeleEF_Click);
-            this.btnDersListeleEF.MouseEnter += (s, e) => { btnDersListeleEF.BackColor = Color.FromArgb(142, 68, 173); };
-            this.btnDersListeleEF.MouseLeave += (s, e) => { btnDersListeleEF.BackColor = Color.FromArgb(155, 89, 182); };
+            this.btnDersListeleEF.MouseEnter += new System.EventHandler(this.btnDersListeleEF_MouseEnter);
+            this.btnDersListeleEF.MouseLeave += new System.EventHandler(this.btnDersListeleEF_MouseLeave);
             
             // btnDersListeleADO
             this.btnDersListeleADO.BackColor = Color.FromArgb(241, 196, 15);
@@ -134,8 +134,8 @@ namespace SinavOgrenciSistemi
             this.btnDersListeleADO.Text = "Soru 5: Ders Listele (ADO.NET)";
             this.btnDersListeleADO.UseVisualStyleBackColor = false;
             this.btnDersListeleADO.Click += new System.EventHandler(this.btnDersListeleADO_Click);
-            this.btnDersListeleADO.MouseEnter += (s, e) => { btnDersListeleADO.BackColor = Color.FromArgb(243, 156, 18); };
-            this.btnDersListeleADO.MouseLeave += (s, e) => { btnDersListeleADO.BackColor = Color.FromArgb(241, 196, 15); };
+            this.btnDersListeleADO.MouseEnter += new System.EventHandler(this.btnDersListeleADO_MouseEnter);
+            this.btnDersListeleADO.MouseLeave += new System.EventHandler(this.btnDersListeleADO_MouseLeave);
             
             // btnGeri
             this.btnGeri.BackColor = Color.FromArgb(149, 165, 166);
@@ -150,8 +150,8 @@ namespace SinavOgrenciSistemi
             this.btnGeri.Text = "← Geri";
             this.btnGeri.UseVisualStyleBackColor = false;
             this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
-            this.btnGeri.MouseEnter += (s, e) => { btnGeri.BackColor = Color.FromArgb(127, 140, 141); };
-            this.btnGeri.MouseLeave += (s, e) => { btnGeri.BackColor = Color.FromArgb(149, 165, 166); };
+            this.btnGeri.MouseEnter += new System.EventHandler(this.btnGeri_MouseEnter);
+            this.btnGeri.MouseLeave += new System.EventHandler(this.btnGeri_MouseLeave);
             
             // panelData
             this.panelData.BackColor = Color.White;

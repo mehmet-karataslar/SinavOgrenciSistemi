@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace SinavOgrenciSistemi
@@ -50,6 +51,77 @@ namespace SinavOgrenciSistemi
         {
             FormGelismis form = new FormGelismis();
             form.ShowDialog();
+        }
+
+        // MouseEnter ve MouseLeave event handler'ları
+        private void btnTemelEF_MouseEnter(object sender, EventArgs e)
+        {
+            btnTemelEF.BackColor = Color.FromArgb(41, 128, 185);
+        }
+
+        private void btnTemelEF_MouseLeave(object sender, EventArgs e)
+        {
+            btnTemelEF.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void btnNavigation_MouseEnter(object sender, EventArgs e)
+        {
+            btnNavigation.BackColor = Color.FromArgb(39, 174, 96);
+        }
+
+        private void btnNavigation_MouseLeave(object sender, EventArgs e)
+        {
+            btnNavigation.BackColor = Color.FromArgb(46, 204, 113);
+        }
+
+        private void btnCRUD_MouseEnter(object sender, EventArgs e)
+        {
+            btnCRUD.BackColor = Color.FromArgb(142, 68, 173);
+        }
+
+        private void btnCRUD_MouseLeave(object sender, EventArgs e)
+        {
+            btnCRUD.BackColor = Color.FromArgb(155, 89, 182);
+        }
+
+        private void btnLINQ_MouseEnter(object sender, EventArgs e)
+        {
+            btnLINQ.BackColor = Color.FromArgb(243, 156, 18);
+        }
+
+        private void btnLINQ_MouseLeave(object sender, EventArgs e)
+        {
+            btnLINQ.BackColor = Color.FromArgb(241, 196, 15);
+        }
+
+        private void btnAggregate_MouseEnter(object sender, EventArgs e)
+        {
+            btnAggregate.BackColor = Color.FromArgb(211, 84, 0);
+        }
+
+        private void btnAggregate_MouseLeave(object sender, EventArgs e)
+        {
+            btnAggregate.BackColor = Color.FromArgb(230, 126, 34);
+        }
+
+        private void btnDurum_MouseEnter(object sender, EventArgs e)
+        {
+            btnDurum.BackColor = Color.FromArgb(192, 57, 43);
+        }
+
+        private void btnDurum_MouseLeave(object sender, EventArgs e)
+        {
+            btnDurum.BackColor = Color.FromArgb(231, 76, 60);
+        }
+
+        private void btnGelismis_MouseEnter(object sender, EventArgs e)
+        {
+            btnGelismis.BackColor = Color.FromArgb(22, 160, 133);
+        }
+
+        private void btnGelismis_MouseLeave(object sender, EventArgs e)
+        {
+            btnGelismis.BackColor = Color.FromArgb(26, 188, 156);
         }
     }
 }

@@ -83,8 +83,8 @@ namespace SinavOgrenciSistemi
             this.btnSinav1Toplam.Text = "Soru 26: SINAV1 Toplamı";
             this.btnSinav1Toplam.UseVisualStyleBackColor = false;
             this.btnSinav1Toplam.Click += new System.EventHandler(this.btnSinav1Toplam_Click);
-            this.btnSinav1Toplam.MouseEnter += (s, e) => { btnSinav1Toplam.BackColor = Color.FromArgb(41, 128, 185); };
-            this.btnSinav1Toplam.MouseLeave += (s, e) => { btnSinav1Toplam.BackColor = Color.FromArgb(52, 152, 219); };
+            this.btnSinav1Toplam.MouseEnter += new System.EventHandler(this.btnSinav1Toplam_MouseEnter);
+            this.btnSinav1Toplam.MouseLeave += new System.EventHandler(this.btnSinav1Toplam_MouseLeave);
             
             // btnSinav1Ortalama
             this.btnSinav1Ortalama.BackColor = Color.FromArgb(46, 204, 113);
@@ -99,8 +99,8 @@ namespace SinavOgrenciSistemi
             this.btnSinav1Ortalama.Text = "Soru 27: SINAV1 Ortalaması";
             this.btnSinav1Ortalama.UseVisualStyleBackColor = false;
             this.btnSinav1Ortalama.Click += new System.EventHandler(this.btnSinav1Ortalama_Click);
-            this.btnSinav1Ortalama.MouseEnter += (s, e) => { btnSinav1Ortalama.BackColor = Color.FromArgb(39, 174, 96); };
-            this.btnSinav1Ortalama.MouseLeave += (s, e) => { btnSinav1Ortalama.BackColor = Color.FromArgb(46, 204, 113); };
+            this.btnSinav1Ortalama.MouseEnter += new System.EventHandler(this.btnSinav1Ortalama_MouseEnter);
+            this.btnSinav1Ortalama.MouseLeave += new System.EventHandler(this.btnSinav1Ortalama_MouseLeave);
             
             // btnOrtalamaUzeri
             this.btnOrtalamaUzeri.BackColor = Color.FromArgb(155, 89, 182);
@@ -115,8 +115,8 @@ namespace SinavOgrenciSistemi
             this.btnOrtalamaUzeri.Text = "Soru 28: Ortalama Üzeri";
             this.btnOrtalamaUzeri.UseVisualStyleBackColor = false;
             this.btnOrtalamaUzeri.Click += new System.EventHandler(this.btnOrtalamaUzeri_Click);
-            this.btnOrtalamaUzeri.MouseEnter += (s, e) => { btnOrtalamaUzeri.BackColor = Color.FromArgb(142, 68, 173); };
-            this.btnOrtalamaUzeri.MouseLeave += (s, e) => { btnOrtalamaUzeri.BackColor = Color.FromArgb(155, 89, 182); };
+            this.btnOrtalamaUzeri.MouseEnter += new System.EventHandler(this.btnOrtalamaUzeri_MouseEnter);
+            this.btnOrtalamaUzeri.MouseLeave += new System.EventHandler(this.btnOrtalamaUzeri_MouseLeave);
             
             // btnGeri
             this.btnGeri.BackColor = Color.FromArgb(149, 165, 166);
@@ -131,8 +131,8 @@ namespace SinavOgrenciSistemi
             this.btnGeri.Text = "← Geri";
             this.btnGeri.UseVisualStyleBackColor = false;
             this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
-            this.btnGeri.MouseEnter += (s, e) => { btnGeri.BackColor = Color.FromArgb(127, 140, 141); };
-            this.btnGeri.MouseLeave += (s, e) => { btnGeri.BackColor = Color.FromArgb(149, 165, 166); };
+            this.btnGeri.MouseEnter += new System.EventHandler(this.btnGeri_MouseEnter);
+            this.btnGeri.MouseLeave += new System.EventHandler(this.btnGeri_MouseLeave);
             
             // panelData
             this.panelData.BackColor = Color.White;

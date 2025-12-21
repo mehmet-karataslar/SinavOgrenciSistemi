@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using SinavOgrenciSistemi.Models;
@@ -132,6 +133,77 @@ namespace SinavOgrenciSistemi
         private void btnGeri_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        // MouseEnter ve MouseLeave event handler'ları
+        private void btnNotListele_MouseEnter(object sender, EventArgs e)
+        {
+            btnNotListele.BackColor = Color.FromArgb(41, 128, 185);
+        }
+
+        private void btnNotListele_MouseLeave(object sender, EventArgs e)
+        {
+            btnNotListele.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void btnNotListeleDersAdi_MouseEnter(object sender, EventArgs e)
+        {
+            btnNotListeleDersAdi.BackColor = Color.FromArgb(39, 174, 96);
+        }
+
+        private void btnNotListeleDersAdi_MouseLeave(object sender, EventArgs e)
+        {
+            btnNotListeleDersAdi.BackColor = Color.FromArgb(46, 204, 113);
+        }
+
+        private void btnAdSoyadBirlestir_MouseEnter(object sender, EventArgs e)
+        {
+            btnAdSoyadBirlestir.BackColor = Color.FromArgb(142, 68, 173);
+        }
+
+        private void btnAdSoyadBirlestir_MouseLeave(object sender, EventArgs e)
+        {
+            btnAdSoyadBirlestir.BackColor = Color.FromArgb(155, 89, 182);
+        }
+
+        private void btnOgrenciKulup_MouseEnter(object sender, EventArgs e)
+        {
+            btnOgrenciKulup.BackColor = Color.FromArgb(243, 156, 18);
+        }
+
+        private void btnOgrenciKulup_MouseLeave(object sender, EventArgs e)
+        {
+            btnOgrenciKulup.BackColor = Color.FromArgb(241, 196, 15);
+        }
+
+        private void btnUcTabloJoin_MouseEnter(object sender, EventArgs e)
+        {
+            btnUcTabloJoin.BackColor = Color.FromArgb(211, 84, 0);
+        }
+
+        private void btnUcTabloJoin_MouseLeave(object sender, EventArgs e)
+        {
+            btnUcTabloJoin.BackColor = Color.FromArgb(230, 126, 34);
+        }
+
+        private void btnOgrenciNotlari_MouseEnter(object sender, EventArgs e)
+        {
+            btnOgrenciNotlari.BackColor = Color.FromArgb(22, 160, 133);
+        }
+
+        private void btnOgrenciNotlari_MouseLeave(object sender, EventArgs e)
+        {
+            btnOgrenciNotlari.BackColor = Color.FromArgb(26, 188, 156);
+        }
+
+        private void btnGeri_MouseEnter(object sender, EventArgs e)
+        {
+            btnGeri.BackColor = Color.FromArgb(127, 140, 141);
+        }
+
+        private void btnGeri_MouseLeave(object sender, EventArgs e)
+        {
+            btnGeri.BackColor = Color.FromArgb(149, 165, 166);
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Data.Entity;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using SinavOgrenciSistemi.Models;
@@ -194,6 +195,57 @@ namespace SinavOgrenciSistemi
         private void btnGeri_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        // MouseEnter ve MouseLeave event handler'ları
+        private void btnEkle_MouseEnter(object sender, EventArgs e)
+        {
+            btnEkle.BackColor = Color.FromArgb(39, 174, 96);
+        }
+
+        private void btnEkle_MouseLeave(object sender, EventArgs e)
+        {
+            btnEkle.BackColor = Color.FromArgb(46, 204, 113);
+        }
+
+        private void btnSil_MouseEnter(object sender, EventArgs e)
+        {
+            btnSil.BackColor = Color.FromArgb(192, 57, 43);
+        }
+
+        private void btnSil_MouseLeave(object sender, EventArgs e)
+        {
+            btnSil.BackColor = Color.FromArgb(231, 76, 60);
+        }
+
+        private void btnGuncelle_MouseEnter(object sender, EventArgs e)
+        {
+            btnGuncelle.BackColor = Color.FromArgb(41, 128, 185);
+        }
+
+        private void btnGuncelle_MouseLeave(object sender, EventArgs e)
+        {
+            btnGuncelle.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void btnEntityStateGoster_MouseEnter(object sender, EventArgs e)
+        {
+            btnEntityStateGoster.BackColor = Color.FromArgb(142, 68, 173);
+        }
+
+        private void btnEntityStateGoster_MouseLeave(object sender, EventArgs e)
+        {
+            btnEntityStateGoster.BackColor = Color.FromArgb(155, 89, 182);
+        }
+
+        private void btnGeri_MouseEnter(object sender, EventArgs e)
+        {
+            btnGeri.BackColor = Color.FromArgb(127, 140, 141);
+        }
+
+        private void btnGeri_MouseLeave(object sender, EventArgs e)
+        {
+            btnGeri.BackColor = Color.FromArgb(149, 165, 166);
         }
     }
 }
