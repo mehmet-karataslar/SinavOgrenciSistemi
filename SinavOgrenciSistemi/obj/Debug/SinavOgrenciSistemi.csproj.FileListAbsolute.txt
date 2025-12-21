@@ -20,3 +20,4 @@ C:\Users\mehme\Desktop\EGITIM ALANI\5.SINIF\1.Donem\2.NDP\odev6\SinavOgrenciSist
 C:\Users\mehme\Desktop\EGITIM ALANI\5.SINIF\1.Donem\2.NDP\odev6\SinavOgrenciSistemi\obj\Debug\SinavOgr.5BF86520.Up2Date
 C:\Users\mehme\Desktop\EGITIM ALANI\5.SINIF\1.Donem\2.NDP\odev6\SinavOgrenciSistemi\obj\Debug\SinavOgrenciSistemi.exe
 C:\Users\mehme\Desktop\EGITIM ALANI\5.SINIF\1.Donem\2.NDP\odev6\SinavOgrenciSistemi\obj\Debug\SinavOgrenciSistemi.pdb
+C:\Users\mehme\Desktop\EGITIM ALANI\5.SINIF\1.Donem\2.NDP\odev6\SinavOgrenciSistemi\obj\Debug\SinavOgrenciSistemi.exe.config
