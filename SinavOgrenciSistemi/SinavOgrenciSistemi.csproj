@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1B2C3D4-E5F6-4A5B-8C9D-0E1F2A3B4C5D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SinavOgrenciSistemi</RootNamespace>
+    <AssemblyName>SinavOgrenciSistemi</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTOs\DersBasariRapor.cs" />
+    <Compile Include="DTOs\DersNotListesi.cs" />
+    <Compile Include="DTOs\KulupBasari.cs" />
+    <Compile Include="DTOs\NotFiltreSonuc.cs" />
+    <Compile Include="DTOs\OgrenciDetay.cs" />
+    <Compile Include="DTOs\OgrenciNotOzetDTO.cs" />
+    <Compile Include="DTOs\ZayifOgrenci.cs" />
+    <Compile Include="FormAggregate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAggregate.Designer.cs">
+      <DependentUpon>FormAggregate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUD.Designer.cs">
+      <DependentUpon>FormCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDurum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDurum.Designer.cs">
+      <DependentUpon>FormDurum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGelismis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGelismis.Designer.cs">
+      <DependentUpon>FormGelismis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLINQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLINQ.Designer.cs">
+      <DependentUpon>FormLINQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNavigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNavigation.Designer.cs">
+      <DependentUpon>FormNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTemelEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTemelEF.Designer.cs">
+      <DependentUpon>FormTemelEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbSinavOgrenciEntities.cs" />
+    <Compile Include="Models\TBLDERSLER.cs" />
+    <Compile Include="Models\TBLKULUPLER.cs" />
+    <Compile Include="Models\TBLNOTLAR.cs" />
+    <Compile Include="Models\TBLOGRENCI.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAggregate.resx">
+      <DependentUpon>FormAggregate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRUD.resx">
+      <DependentUpon>FormCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDurum.resx">
+      <DependentUpon>FormDurum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGelismis.resx">
+      <DependentUpon>FormGelismis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLINQ.resx">
+      <DependentUpon>FormLINQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNavigation.resx">
+      <DependentUpon>FormNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTemelEF.resx">
+      <DependentUpon>FormTemelEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
+
