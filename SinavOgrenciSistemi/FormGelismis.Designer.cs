@@ -206,9 +206,6 @@ namespace SinavOgrenciSistemi
             this.flowPanelSP.WrapContents = false;
             this.flowPanelSP.Padding = new Padding(10);
             
-            // SP kontrolleri ekle
-            AddSPControls();
-            
             // tabFunctions
             this.tabFunctions.BackColor = Color.FromArgb(236, 240, 241);
             this.tabFunctions.Controls.Add(this.groupBoxFunctions);
@@ -236,9 +233,6 @@ namespace SinavOgrenciSistemi
             this.flowPanelFunctions.WrapContents = false;
             this.flowPanelFunctions.Padding = new Padding(10);
             
-            // Functions kontrolleri ekle
-            AddFunctionControls();
-            
             // tabTransactions
             this.tabTransactions.BackColor = Color.FromArgb(236, 240, 241);
             this.tabTransactions.Controls.Add(this.groupBoxTransactions);
@@ -265,9 +259,6 @@ namespace SinavOgrenciSistemi
             this.flowPanelTransactions.FlowDirection = FlowDirection.TopDown;
             this.flowPanelTransactions.WrapContents = false;
             this.flowPanelTransactions.Padding = new Padding(10);
-            
-            // Transaction kontrolleri ekle
-            AddTransactionControls();
             
             // panelData
             this.panelData.BackColor = Color.White;

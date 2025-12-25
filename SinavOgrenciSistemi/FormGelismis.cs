@@ -29,6 +29,11 @@ namespace SinavOgrenciSistemi
             cmbDers.DataSource = db.TBLDERSLER.ToList();
             cmbDers.ValueMember = "DERSID";
             cmbDers.DisplayMember = "DERSAD";
+
+            // Kontrolleri yükle
+            AddSPControls();
+            AddFunctionControls();
+            AddTransactionControls();
         }
 
         protected override void OnFormClosed(FormClosedEventArgs e)
