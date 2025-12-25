@@ -291,8 +291,8 @@ namespace SinavOgrenciSistemi
             this.btnGeri.Text = "← Geri";
             this.btnGeri.UseVisualStyleBackColor = false;
             this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
-            this.btnGeri.MouseEnter += (s, e) => { btnGeri.BackColor = Color.FromArgb(127, 140, 141); };
-            this.btnGeri.MouseLeave += (s, e) => { btnGeri.BackColor = Color.FromArgb(149, 165, 166); };
+            this.btnGeri.MouseEnter += new System.EventHandler(this.btnGeri_MouseEnter);
+            this.btnGeri.MouseLeave += new System.EventHandler(this.btnGeri_MouseLeave);
             
             // dataGridView1
             this.dataGridView1.AllowUserToAddRows = false;
@@ -392,12 +392,12 @@ namespace SinavOgrenciSistemi
                 ForeColor = Color.White,
                 Size = new Size(300, 45),
                 Text = text,
-                UseVisualStyleBackColor = false
+                UseVisualStyleBackColor = false,
+                Tag = color
             };
             button.Click += clickHandler;
-            Color btnColor = color;
-            button.MouseEnter += (s, e) => { button.BackColor = Color.FromArgb(Math.Max(0, btnColor.R - 15), Math.Max(0, btnColor.G - 15), Math.Max(0, btnColor.B - 15)); };
-            button.MouseLeave += (s, e) => { button.BackColor = btnColor; };
+            button.MouseEnter += new System.EventHandler(this.DynamicButton_MouseEnter);
+            button.MouseLeave += new System.EventHandler(this.DynamicButton_MouseLeave);
             panel.Controls.Add(button);
             return button;
         }

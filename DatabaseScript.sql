@@ -1,9 +1,9 @@
 -- ================================================================
--- ENTITY FRAMEWORK Ã–DEV - VERÄ°TABANI OLUÅžTURMA SCRÄ°PTÄ°
--- VeritabanÄ±: dbSinavOgrenci
+-- ENTITY FRAMEWORK ÖDEV - VERÝTABANI OLUÞTURMA SCRÝPTÝ
+-- Veritabaný: dbSinavOgrenci
 -- ================================================================
 
--- VeritabanÄ±nÄ± OluÅŸturma
+-- Veritabanýný Oluþturma
 CREATE DATABASE dbSinavOgrenci;
 GO
 
@@ -11,10 +11,10 @@ USE dbSinavOgrenci;
 GO
 
 -- ================================================================
--- TABLOLARIN OLUÅžTURULMASI
+-- TABLOLARIN OLUÞTURULMASI
 -- ================================================================
 
--- 1. TBLKULUPLER - KulÃ¼p Tablosu
+-- 1. TBLKULUPLER - Kulüp Tablosu
 CREATE TABLE TBLKULUPLER (
     KULUPID   INT IDENTITY(1,1) PRIMARY KEY,
     KULUPAD   NVARCHAR(50) NOT NULL
@@ -28,7 +28,7 @@ CREATE TABLE TBLDERSLER (
 );
 GO
 
--- 3. TBLOGRENCI - Ã–ÄŸrenci Tablosu
+-- 3. TBLOGRENCI - Öðrenci Tablosu
 CREATE TABLE TBLOGRENCI (
     OgrenciID    INT IDENTITY(1,1) PRIMARY KEY,
     OgrenciAd    NVARCHAR(50) NOT NULL,
@@ -61,39 +61,39 @@ CREATE TABLE TBLNOTLAR (
 GO
 
 -- ================================================================
--- Ã–RNEK VERÄ°LER
+-- ÖRNEK VERÝLER
 -- ================================================================
 
--- KulÃ¼pler
+-- Kulüpler
 INSERT INTO TBLKULUPLER (KULUPAD) VALUES
-(N'Bilgisayar TopluluÄŸu'),
-(N'Robotik KulÃ¼bÃ¼'),
-(N'Siber GÃ¼venlik KulÃ¼bÃ¼'),
-(N'YazÄ±lÄ±m GeliÅŸtirme KulÃ¼bÃ¼'),
-(N'Yapay Zeka TopluluÄŸu');
+(N'Bilgisayar Topluluðu'),
+(N'Robotik Kulübü'),
+(N'Siber Güvenlik Kulübü'),
+(N'Yazýlým Geliþtirme Kulübü'),
+(N'Yapay Zeka Topluluðu');
 GO
 
 -- Dersler
 INSERT INTO TBLDERSLER (DERSAD) VALUES
-(N'Veri TabanÄ±'),
+(N'Veri Tabaný'),
 (N'Programlama'),
-(N'AÄŸ Teknolojileri'),
-(N'Web TasarÄ±m'),
+(N'Að Teknolojileri'),
+(N'Web Tasarým'),
 (N'Mobil Uygulama');
 GO
 
--- Ã–ÄŸrenciler
+-- Öðrenciler
 INSERT INTO TBLOGRENCI (OgrenciAd, OgrenciSoyad, OgrenciFoto, KulupID) VALUES
-(N'Ali', N'YÄ±lmaz', NULL, 1),
-(N'AyÅŸe', N'Kaya', NULL, 2),
+(N'Ali', N'Yýlmaz', NULL, 1),
+(N'Ayþe', N'Kaya', NULL, 2),
 (N'Mehmet', N'Demir', NULL, 3),
-(N'Fatma', N'Ã‡elik', NULL, 1),
-(N'Ahmet', N'Åžahin', NULL, 2),
+(N'Fatma', N'Çelik', NULL, 1),
+(N'Ahmet', N'Þahin', NULL, 2),
 (N'Zeynep', N'Arslan', NULL, 4),
-(N'Mustafa', N'Ã–zkan', NULL, 5),
-(N'Elif', N'YÄ±ldÄ±rÄ±m', NULL, 3),
-(N'Hasan', N'AydÄ±n', NULL, 4),
-(N'Merve', N'KoÃ§', NULL, 5);
+(N'Mustafa', N'Özkan', NULL, 5),
+(N'Elif', N'Yýldýrým', NULL, 3),
+(N'Hasan', N'Aydýn', NULL, 4),
+(N'Merve', N'Koç', NULL, 5);
 GO
 
 -- Notlar
@@ -119,7 +119,7 @@ GO
 -- STORED PROCEDURES
 -- ================================================================
 
--- SORU 30: sp_NotEkleKontrollu - Tekrar kayÄ±t kontrolÃ¼ ile not ekleme
+-- SORU 30: sp_NotEkleKontrollu - Tekrar kayýt kontrolü ile not ekleme
 CREATE PROCEDURE sp_NotEkleKontrollu
     @OgrenciID INT,
     @DersID INT,
@@ -130,10 +130,10 @@ AS
 BEGIN
     SET NOCOUNT ON;
     
-    -- AynÄ± Ã¶ÄŸrenci-ders kaydÄ± var mÄ± kontrol et
+    -- Ayný öðrenci-ders kaydý var mý kontrol et
     IF EXISTS (SELECT 1 FROM TBLNOTLAR WHERE OGRENCI = @OgrenciID AND DERS = @DersID)
     BEGIN
-        RAISERROR('Bu Ã¶ÄŸrenci bu derse zaten kayÄ±tlÄ±!', 16, 1);
+        RAISERROR('Bu öðrenci bu derse zaten kayýtlý!', 16, 1);
         RETURN;
     END
     
@@ -144,15 +144,15 @@ BEGIN
     SET @Ortalama = (@Sinav1 + @Sinav2 + @Sinav3) / 3.0;
     SET @Durum = CASE WHEN @Ortalama >= 50 THEN 1 ELSE 0 END;
     
-    -- KayÄ±t ekle
+    -- Kayýt ekle
     INSERT INTO TBLNOTLAR (DERS, OGRENCI, SINAV1, SINAV2, SINAV3, ORTALAMA, DURUM)
     VALUES (@DersID, @OgrenciID, @Sinav1, @Sinav2, @Sinav3, @Ortalama, @Durum);
     
-    SELECT 'KayÄ±t baÅŸarÄ±yla eklendi.' AS Mesaj;
+    SELECT 'Kayýt baþarýyla eklendi.' AS Mesaj;
 END
 GO
 
--- SORU 31: sp_OgrenciDetayGetir - Ã–ÄŸrenci detay raporu
+-- SORU 31: sp_OgrenciDetayGetir - Öðrenci detay raporu
 CREATE PROCEDURE sp_OgrenciDetayGetir
     @OgrenciID INT
 AS
@@ -167,7 +167,7 @@ BEGIN
         n.SINAV2,
         n.SINAV3,
         n.ORTALAMA,
-        CASE WHEN n.DURUM = 1 THEN 'GEÃ‡TÄ°' ELSE 'KALDI' END AS Durum
+        CASE WHEN n.DURUM = 1 THEN 'GEÇTÝ' ELSE 'KALDI' END AS Durum
     FROM TBLOGRENCI o
     LEFT JOIN TBLKULUPLER k ON o.KulupID = k.KULUPID
     LEFT JOIN TBLNOTLAR n ON o.OgrenciID = n.OGRENCI
@@ -176,7 +176,7 @@ BEGIN
 END
 GO
 
--- SORU 32: sp_DersBasariRaporu - Ders bazÄ±nda baÅŸarÄ± analizi
+-- SORU 32: sp_DersBasariRaporu - Ders bazýnda baþarý analizi
 CREATE PROCEDURE sp_DersBasariRaporu
     @DersID INT
 AS
@@ -190,22 +190,22 @@ BEGIN
     DECLARE @EnYuksekOrtalama DECIMAL(5,2);
     DECLARE @EnBasariliOgrenci NVARCHAR(100);
     
-    -- Toplam Ã¶ÄŸrenci sayÄ±sÄ±
+    -- Toplam öðrenci sayýsý
     SELECT @ToplamOgrenci = COUNT(*) FROM TBLNOTLAR WHERE DERS = @DersID;
     
-    -- GeÃ§en ve kalan sayÄ±larÄ±
+    -- Geçen ve kalan sayýlarý
     SELECT @GecenSayisi = COUNT(*) FROM TBLNOTLAR WHERE DERS = @DersID AND DURUM = 1;
     SELECT @KalanSayisi = COUNT(*) FROM TBLNOTLAR WHERE DERS = @DersID AND DURUM = 0;
     
-    -- BaÅŸarÄ± yÃ¼zdesi
+    -- Baþarý yüzdesi
     SET @BasariYuzdesi = CASE WHEN @ToplamOgrenci > 0 
         THEN CAST(@GecenSayisi AS DECIMAL(5,2)) / @ToplamOgrenci * 100 
         ELSE 0 END;
     
-    -- En yÃ¼ksek ortalama
+    -- En yüksek ortalama
     SELECT @EnYuksekOrtalama = MAX(ORTALAMA) FROM TBLNOTLAR WHERE DERS = @DersID;
     
-    -- En baÅŸarÄ±lÄ± Ã¶ÄŸrenci
+    -- En baþarýlý öðrenci
     SELECT TOP 1 @EnBasariliOgrenci = o.OgrenciAd + ' ' + o.OgrenciSoyad
     FROM TBLNOTLAR n
     INNER JOIN TBLOGRENCI o ON n.OGRENCI = o.OgrenciID
@@ -221,7 +221,7 @@ BEGIN
 END
 GO
 
--- SORU 33: sp_NotGuncelle - Not gÃ¼ncelleme
+-- SORU 33: sp_NotGuncelle - Not güncelleme
 CREATE PROCEDURE sp_NotGuncelle
     @NotID INT,
     @S1 INT,
@@ -249,7 +249,7 @@ BEGIN
 END
 GO
 
--- SORU 34: sp_TopluSil - KulÃ¼p bazlÄ± toplu silme
+-- SORU 34: sp_TopluSil - Kulüp bazlý toplu silme
 CREATE PROCEDURE sp_TopluSil
     @KulupID INT
 AS
@@ -258,7 +258,7 @@ BEGIN
     
     DECLARE @SilinenKayit INT = 0;
     
-    -- KulÃ¼pteki Ã¶ÄŸrencilerin notlarÄ±nÄ± sil
+    -- Kulüpteki öðrencilerin notlarýný sil
     DELETE n
     FROM TBLNOTLAR n
     INNER JOIN TBLOGRENCI o ON n.OGRENCI = o.OgrenciID
@@ -270,7 +270,7 @@ BEGIN
 END
 GO
 
--- SORU 44: sp_OgrenciTamSil - Transaction ile Ã¶ÄŸrenci silme
+-- SORU 44: sp_OgrenciTamSil - Transaction ile öðrenci silme
 CREATE PROCEDURE sp_OgrenciTamSil
     @OgrenciID INT
 AS
@@ -279,18 +279,18 @@ BEGIN
     BEGIN TRY
         BEGIN TRANSACTION;
         
-        -- Ã–ÄŸrencinin kulÃ¼bÃ¼nÃ¼ al
+        -- Öðrencinin kulübünü al
         DECLARE @KulupID INT;
         SELECT @KulupID = KulupID FROM TBLOGRENCI WHERE OgrenciID = @OgrenciID;
         
-        -- Ã–ÄŸrencinin notlarÄ±nÄ± sil
+        -- Öðrencinin notlarýný sil
         DELETE FROM TBLNOTLAR WHERE OGRENCI = @OgrenciID;
         
-        -- Ã–ÄŸrenciyi sil
+        -- Öðrenciyi sil
         DELETE FROM TBLOGRENCI WHERE OgrenciID = @OgrenciID;
         
         COMMIT TRANSACTION;
-        SELECT 'Ä°ÅŸlem baÅŸarÄ±lÄ±' AS Sonuc;
+        SELECT 'Ýþlem baþarýlý' AS Sonuc;
     END TRY
     BEGIN CATCH
         ROLLBACK TRANSACTION;
@@ -303,7 +303,7 @@ GO
 -- SCALAR FUNCTIONS
 -- ================================================================
 
--- SORU 35: fn_GenelBasariPuani - Ã–ÄŸrencinin genel baÅŸarÄ± puanÄ±
+-- SORU 35: fn_GenelBasariPuani - Öðrencinin genel baþarý puaný
 CREATE FUNCTION fn_GenelBasariPuani(@OgrenciID INT)
 RETURNS DECIMAL(5,2)
 AS
@@ -322,7 +322,7 @@ GO
 -- TABLE-VALUED FUNCTIONS
 -- ================================================================
 
--- SORU 36: fn_DersNotListesi - Ders bazlÄ± not listesi
+-- SORU 36: fn_DersNotListesi - Ders bazlý not listesi
 CREATE FUNCTION fn_DersNotListesi(@DersID INT)
 RETURNS TABLE
 AS
@@ -334,14 +334,14 @@ RETURN
         n.SINAV2,
         n.SINAV3,
         n.ORTALAMA,
-        CASE WHEN n.DURUM = 1 THEN 'GEÃ‡TÄ°' ELSE 'KALDI' END AS Durum
+        CASE WHEN n.DURUM = 1 THEN 'GEÇTÝ' ELSE 'KALDI' END AS Durum
     FROM TBLNOTLAR n
     INNER JOIN TBLOGRENCI o ON n.OGRENCI = o.OgrenciID
     WHERE n.DERS = @DersID
 );
 GO
 
--- SORU 37: fn_NotFiltrele - Ã‡ok parametreli TVF
+-- SORU 37: fn_NotFiltrele - Çok parametreli TVF
 CREATE FUNCTION fn_NotFiltrele(
     @MinOrtalama DECIMAL(5,2),
     @MaxOrtalama DECIMAL(5,2),
@@ -356,7 +356,7 @@ RETURN
         o.OgrenciAd + ' ' + o.OgrenciSoyad AS OgrenciAdSoyad,
         d.DERSAD AS DersAdi,
         n.ORTALAMA,
-        CASE WHEN n.DURUM = 1 THEN 'GEÃ‡TÄ°' ELSE 'KALDI' END AS Durum
+        CASE WHEN n.DURUM = 1 THEN 'GEÇTÝ' ELSE 'KALDI' END AS Durum
     FROM TBLNOTLAR n
     INNER JOIN TBLOGRENCI o ON n.OGRENCI = o.OgrenciID
     INNER JOIN TBLDERSLER d ON n.DERS = d.DERSID
@@ -366,7 +366,7 @@ RETURN
 );
 GO
 
--- SORU 38: fn_KulupBasariOrani - KulÃ¼p baÅŸarÄ± analizi
+-- SORU 38: fn_KulupBasariOrani - Kulüp baþarý analizi
 CREATE FUNCTION fn_KulupBasariOrani()
 RETURNS TABLE
 AS
@@ -385,7 +385,7 @@ RETURN
 );
 GO
 
--- SORU 39: fn_ZayifOgrenciler - ZayÄ±f baÅŸarÄ± gÃ¶steren Ã¶ÄŸrenciler (Inline TVF)
+-- SORU 39: fn_ZayifOgrenciler - Zayýf baþarý gösteren öðrenciler (Inline TVF)
 CREATE FUNCTION fn_ZayifOgrenciler()
 RETURNS TABLE
 AS
@@ -402,7 +402,7 @@ RETURN
 );
 GO
 
--- SORU 40: fn_OgrenciNotOzet - Ã–ÄŸrenci not Ã¶zeti
+-- SORU 40: fn_OgrenciNotOzet - Öðrenci not özeti
 CREATE FUNCTION fn_OgrenciNotOzet(@OgrenciID INT)
 RETURNS @Result TABLE (
     ToplamDers INT,
@@ -429,5 +429,5 @@ BEGIN
 END
 GO
 
-PRINT 'VeritabanÄ± ve tÃ¼m nesneler baÅŸarÄ±yla oluÅŸturuldu!';
+PRINT 'Veritabaný ve tüm nesneler baþarýyla oluþturuldu!';
 GO

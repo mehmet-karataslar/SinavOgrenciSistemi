@@ -1,6 +1,7 @@
 using System;
 using System.Data.Entity;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Transactions;
@@ -359,6 +360,36 @@ En Başarılı: {sonuc.EnBasariliOgrenci}");
         private void btnGeri_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnGeri_MouseEnter(object sender, EventArgs e)
+        {
+            btnGeri.BackColor = Color.FromArgb(127, 140, 141);
+        }
+
+        private void btnGeri_MouseLeave(object sender, EventArgs e)
+        {
+            btnGeri.BackColor = Color.FromArgb(149, 165, 166);
+        }
+
+        private void DynamicButton_MouseEnter(object sender, EventArgs e)
+        {
+            if (sender is Button button && button.Tag is Color originalColor)
+            {
+                button.BackColor = Color.FromArgb(
+                    Math.Max(0, originalColor.R - 15),
+                    Math.Max(0, originalColor.G - 15),
+                    Math.Max(0, originalColor.B - 15)
+                );
+            }
+        }
+
+        private void DynamicButton_MouseLeave(object sender, EventArgs e)
+        {
+            if (sender is Button button && button.Tag is Color originalColor)
+            {
+                button.BackColor = originalColor;
+            }
         }
     }
 }
